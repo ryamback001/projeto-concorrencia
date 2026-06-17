@@ -2,10 +2,10 @@ import threading
 import queue
 import os
 
-# Fila compartilhada
+# Fila compartilhada, para ler os arquivos a serem processados
 fila = queue.Queue()
 
-# Variável compartilhada
+# Variável compartilhada, onde será acumulado o total de palavras recusro compartilhado
 total_palavras = 0
 
 # Lock para sincronização

@@ -28,3 +28,33 @@ O projeto segue o conceito de MapReduce simplificado:
 
 Map → cada thread conta palavras de um arquivo.
 Reduce → soma dos resultados individuais.
+
+Referências
+
+> threading — Thread-based parallelism¶
+https://docs.python.org/3/library/threading.html acesso 17/06/2026
+
+O módulo `threading` permite executar múltiplas threads (unidades menores de um processo) simultaneamente dentro de um único processo. 
+Ele possibilita a criação e o gerenciamento de threads, tornando possível a execução de tarefas em paralelo, compartilhando espaço de memória. 
+Threads são particularmente úteis quando as tarefas são limitadas por E/S, como operações com arquivos ou requisições de rede, onde grande parte 
+do tempo é gasto aguardando recursos externos.
+
+Um caso de uso típico para `threading` inclui o gerenciamento de um conjunto de threads de trabalho que podem processar múltiplas tarefas simultaneamente.
+Aqui está um exemplo básico de criação e inicialização de threads usando `Thread`:
+
+> queue— Uma classe de fila sincronizada
+
+https://docs.python.org/3/library/queue.html acesso 17/06/2026
+
+Este queuemódulo implementa filas com múltiplos produtores e múltiplos consumidores. É especialmente útil em programação multithread.
+
+
+> os — Diversas interfaces de sistema operacional
+
+https://docs.python.org/pt-br/3/library/os.html acesso 17/06/2026
+
+Este módulo fornece uma maneira simples de usar funcionalidades que são dependentes de sistema operacional.
+
+Foi utilizado como apoio e base o Chatgpt 4 chatgpt.com
+VS code e Github e gitbash
+
