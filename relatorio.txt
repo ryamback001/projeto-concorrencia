@@ -1,0 +1,30 @@
+1. Problema Escolhido
+
+Contagem de palavras em múltiplos arquivos de texto.
+
+2. Concorrência e Paralelismo
+
+O projeto utiliza múltiplas threads para processar vários arquivos simultaneamente, permitindo concorrência e, em máquinas multicore, paralelismo.
+
+3. Estratégia de Decomposição
+
+Foi utilizada decomposição por dados. Cada thread processa um subconjunto dos arquivos existentes.
+
+4. Comunicação
+
+A comunicação ocorre por meio de uma fila compartilhada (Queue), onde os arquivos são distribuídos entre as threads.
+
+5. Sincronização
+
+Foi utilizado Lock para proteger o acesso à variável compartilhada responsável pelo total de palavras, evitando condições de corrida.
+
+6. Falhas
+
+Arquivos inválidos ou inacessíveis são tratados por exceções. A thread registra o erro e continua executando as demais tarefas.
+
+7. Padrão Utilizado
+
+O projeto segue o conceito de MapReduce simplificado:
+
+Map → cada thread conta palavras de um arquivo.
+Reduce → soma dos resultados individuais.
